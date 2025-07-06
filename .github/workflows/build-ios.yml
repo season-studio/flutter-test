@@ -20,14 +20,14 @@ jobs:
         with:
           flutter-version: '3.32.5'
 
-      - name: Install dependencies
-        run: flutter pub get
-
       - name: Get source
         run: |
           wget https://www.season-studio.top/flutter_test.tar.gz
           tar -zxvf flutter_test.tar.gz
           ls
+
+      - name: Install dependencies
+        run: flutter pub get
 
       - name: Build iOS .ipa
         run: |
