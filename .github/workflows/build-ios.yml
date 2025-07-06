@@ -31,7 +31,6 @@ jobs:
 
       - name: Build iOS .ipa
         run: |
-          cd flutter_test.tar.gz
           flutter build ipa \
             --release \
             --export-options-plist=ios/ExportOptions.plist
