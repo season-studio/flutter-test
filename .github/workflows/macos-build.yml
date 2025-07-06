@@ -37,3 +37,10 @@ jobs:
         run: |
           # 替换为你的构建命令，例如：
           touch ok.txt
+
+      # Upload results
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-result
+          path: ok.txt
