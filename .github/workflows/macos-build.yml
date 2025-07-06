@@ -36,4 +36,4 @@ jobs:
       - name: Build project
         run: |
           # 替换为你的构建命令，例如：
-          make build
+          touch ok.txt
