@@ -31,12 +31,10 @@ jobs:
 
       - name: Build iOS .ipa
         run: |
-          flutter build ipa \
-            --release \
-            --export-options-plist=ios/ExportOptions.plist
-
+          flutter build ios --release --no-codesign
+          
       - name: Upload .ipa artifact
         uses: actions/upload-artifact@v4
         with:
           name: ios-ipa
-          path: build/ios/ipa/*.ipa
+          path: build/ios/iphoneos/*.app
